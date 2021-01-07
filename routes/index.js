@@ -59,7 +59,6 @@ router.get('/documenttypeliste', function(req,res){
       });
   });
 
-
 //GET liste des documents avec le titre sans l'id mais avec le type de document
 router.get('/documentsliste', function(req, res) {
     var db = req.db;
@@ -70,12 +69,6 @@ router.get('/documentsliste', function(req, res) {
         });
     });
 });
-
-//POST ajouter le doc à la collection des emprunts
-
-//UPDATE mettre a jour la collection 
-
-//DELETE 
 
 
 /* GET New User page. Méthode du tutoriel

@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Liste des documents</title>
+<head>
+    <title>Liste des documents par rangs</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1>Médiathèque :</h1>
-      <%
+</head>
+<body>
+    <h1>Liste des documents avec leurs types :</h1>
+    <%
         var list = '';  
         for (i = 0; i < documentsliste.length; i++) {
-          list += '<ul><li>' + documentsliste[i].fields.titre_avec_lien_vers_le_catalogue + '</li></ul>';
-          list += '<ul><li>' + documentsliste[i].fields.type_de_document + '</li></ul>';
-          list += '<button>' + 'Emprunter' + '</button>';
-
-        }
-      %>
-      <%- list %>
-  </body>
+        list += '<ul><li>' + documentsliste[i].fields.titre_avec_lien_vers_le_catalogue + '</li></ul>';
+        list += '<ul><li>' + documentsliste[i].fields.type_de_document + '</li></ul>';
+        list += '<button>' + 'Emprunter' + '</button>';
+            }
+        %>
+    <%- list %>
+</body>
 </html>
