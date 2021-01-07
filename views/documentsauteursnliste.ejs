@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Liste des documents avec Auteur</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <h1>Liste des documents avec leur auteur dont leur titre commençent par N :</h1>
+    <p><b>Les titres des documents qui commençent par N avec leur auteur :</b></p>
+    <table style="width:100%">
+        <tr>
+            <th>Titre des documents</th>
+            <th>Auteur des documents</th>
+        </tr>
+        <tr>
+            <td>
+                <%
+            var list = '';  
+            for (i = 0; i < documentsauteursnliste.length; i++) {
+            list += '<ul>' + documentsauteursnliste[i].fields.titre_avec_lien_vers_le_catalogue + '</ul>';
+                }
+                    %>
+                <%- list %>
+            </td>
+            <td>
+                <%
+            var list = '';  
+            for (i = 0; i < documentsauteursnliste.length; i++) {
+            list += '<ul>' + documentsauteursnliste[i].fields.auteur + '</ul>'
+                }
+                    %>
+                <%- list %>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

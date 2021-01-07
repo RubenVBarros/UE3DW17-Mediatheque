@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Liste des documents</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Médiathèque :</h1>
+      <%
+        var list = '';  
+        for (i = 0; i < documentsliste.length; i++) {
+          list += '<ul><li>' + documentsliste[i].fields.titre_avec_lien_vers_le_catalogue + '</li></ul>';
+          list += '<ul><li>' + documentsliste[i].fields.type_de_document + '</li></ul>';
+          list += '<button>' + 'Emprunter' + '</button>';
+
+        }
+      %>
+      <%- list %>
+  </body>
+</html>

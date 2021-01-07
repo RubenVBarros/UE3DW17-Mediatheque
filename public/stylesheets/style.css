@@ -1,0 +1,22 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+/*Style du tableau pour les résultats des requêtes*/
+table{
+    border: solid;
+}
+td{
+    border: solid;
+}
+th{
+    border:solid;
+}
+ul{
+    font-weight: bold;
+}

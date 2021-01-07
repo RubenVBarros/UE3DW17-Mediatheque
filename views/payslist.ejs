@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Liste de pays</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Liste de pays :</h1>
+    <p><b>Nom officiel des pays commençant par la lettre B :</b></p>
+    <ul>
+        <%# payslist fait reference au nom de la page.ejs dans notre cas payslist
+        ce qui nous intéresse est le payslist[i].name.official c'est ce qui nous permet d'afficher la Liste
+        des pays
+        %>
+      <%
+        var list = '';  
+        for (i = 0; i < payslist.length; i++) {
+          list += '<ul><li><a href="">' + payslist[i].name.official + '</a></li></ul>';
+        }
+      %>
+      <%- list %>
+    </ul>
+  </body>
+</html>

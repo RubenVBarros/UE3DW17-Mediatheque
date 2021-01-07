@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Liste des documents avec infos</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <h1>Liste des documents qui n'ont pas de type de documents:</h1>
+    <p><b>Les infos des documents qui ont un champ vide dans les types de documents :</b></p>
+    <table style="width:100%">
+        <tr>
+            <th>Titre des documents</th>
+            <th>Auteur des documents</th>
+            <th>Rangs des documents</th>
+            <th>Nombre de réservations</th>
+        </tr>
+        <tr>
+            <td>
+                <%
+            var list = '';  
+            for (i = 0; i < documenttypevide.length; i++) {
+            list += '<ul>' + documenttypevide[i].fields.titre_avec_lien_vers_le_catalogue + '</ul>';
+                }
+                    %>
+                <%- list %>
+            </td>
+            <td>
+                <%
+            var list = '';  
+            for (i = 0; i < documenttypevide.length; i++) {
+            list += '<ul>' + documenttypevide[i].fields.auteur + '</ul>'
+                }
+                    %>
+                <%- list %>
+            </td>
+            <td>
+                <%
+                var list = '';  
+                for (i = 0; i < documenttypevide.length; i++) {
+                list += '<ul>' + documenttypevide[i].fields.rang + '</ul>'
+                    }
+                        %>
+                    <%- list %>
+            </td>
+            <td>
+                <%
+                var list = '';  
+                for (i = 0; i < documenttypevide.length; i++) {
+                list += '<ul>' + documenttypevide[i].fields.nombre_de_reservations + '</ul>'
+                    }
+                        %>
+                    <%- list %>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

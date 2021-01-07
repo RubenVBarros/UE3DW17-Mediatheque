@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Liste des documents</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Types de documents</h1>
+    <h2>Liste de tout les types de documents</h2>
+    <table style="width:100%">
+        <tr>
+            <th>Types de documents</th>
+        </tr>
+        <tr>
+            <td>
+                <% for (documenttypelist in documenttypeliste) { 
+                    let d = documenttypeliste[documenttypelist]; %>
+                  
+                  <ul><%= d %></ul>
+                <% } %> 
+            </td>
+        </tr>
+    </table>
+  </body>
+</html>

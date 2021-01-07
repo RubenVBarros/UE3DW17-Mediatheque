@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Liste des documents par rangs</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <h1>Liste des documents avec les rangs allant de 1 à 10 :</h1>
+    <p><b>Les titres des tous les documents avec leurs rangs :</b></p>
+    <table style="width:100%">
+        <tr>
+            <th>Titre des documents</th>
+            <th>Rangs des documents</th>
+        </tr>
+        <tr>
+            <td>
+                <%
+            var list = '';  
+            for (i = 0; i < documentsrangsliste.length; i++) {
+            list += '<ul>' + documentsrangsliste[i].fields.titre_avec_lien_vers_le_catalogue + '</ul>';
+                }
+                    %>
+                <%- list %>
+            </td>
+            <td>
+                <%
+            var list = '';  
+            for (i = 0; i < documentsrangsliste.length; i++) {
+            list += '<ul>' + documentsrangsliste[i].fields.rang + '</ul>'
+                }
+                    %>
+                <%- list %>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
