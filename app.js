@@ -6,7 +6,7 @@ var logger = require('morgan');
 
 // New Code
 var monk = require('monk');
-var db = monk('localhost:27017/ruben_barros'); // <-- Ici mettre le nom de votre base de données qui contient les collections
+var db = monk('localhost:27017/mediatheque'); // <-- Ici mettre le nom de votre base de données qui contient les collections
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
