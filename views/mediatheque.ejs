@@ -14,13 +14,11 @@
             <th>Type de document</th>
         </thead>
         <% for(let i = 0; i < documents.length; i++){
-            doc = documents[i]; %>
+            doc = documents[i];%>
             <tr>
                 <td><%= doc.fields.titre_avec_lien_vers_le_catalogue %></td>
                 <td><%= doc.fields.type_de_document %></td>
-                <td><button>
-                    <%= doc.fields.emprunt ? "Rendre" : "Emprunter" %>  
-                </button></td>
+                <td><button value="<%= doc._id %>"><%= doc.emprunt ? "Rendre" : "Emprunter" %></button></td>
             </tr>
         <% } %>
     </table>

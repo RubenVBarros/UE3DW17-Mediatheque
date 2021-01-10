@@ -25,3 +25,7 @@ ul{
 tr:nth-child(odd){
     background-color: #d8d8d8;
 }
+
+button{
+    width:100%;
+}
