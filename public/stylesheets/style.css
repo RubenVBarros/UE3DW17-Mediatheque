@@ -10,6 +10,7 @@ a {
 /*Style du tableau pour les résultats des requêtes*/
 table{
     border: solid;
+    border-collapse: collapse;
 }
 td{
     border: solid;
@@ -19,4 +20,8 @@ th{
 }
 ul{
     font-weight: bold;
+}
+
+tr:nth-child(odd){
+    background-color: #d8d8d8;
 }
