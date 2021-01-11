@@ -23,7 +23,6 @@ router.patch('/:id/:action', function(req,res){
                     console.error(error.message);
                 }
                 res.send('ok'); 
-
             });
             break;
         case "rendre":

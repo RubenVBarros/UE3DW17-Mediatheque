@@ -18,11 +18,12 @@
             <tr>
                 <td><%= doc.fields.titre_avec_lien_vers_le_catalogue %></td>
                 <td><%= doc.fields.type_de_document %></td>
-                <td><button value="<%= doc._id %>"><%= doc.emprunt ? "Rendre" : "Emprunter" %></button></td>
+                <td><button onClick="toggleEmprunt('<%= doc._id %>','<%= doc.emprunt ? "rendre" : "emprunter" %>')"><%= doc.emprunt ? "Rendre" : "Emprunter" %></button></td>
+                <% console.log(doc.emprunt)%>
             </tr>
         <% } %>
     </table>
     
-
+    <script src='/js/script.js'></script>
 </body>
 </html>
